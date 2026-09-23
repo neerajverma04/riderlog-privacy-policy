@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy â RiderLog: Mileage Tracker</title>
+  <title>Privacy Policy &mdash; RiderLog: Mileage Tracker</title>
   <style>
     :root {
       --bg: #0f172a;
@@ -30,18 +30,18 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 1rem;
       margin-bottom: 1rem;
     }
-    .logo-icon {
-      width: 48px; height: 48px;
-      background: var(--accent);
+    .logo img {
+      width: 52px;
+      height: 52px;
       border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
     h1 { font-size: 2rem; font-weight: 700; color: #f8fafc; }
-    .subtitle { color: var(--muted); font-size: 0.95rem; margin-top: 0.5rem; }
+    .subtitle { color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem; }
     .effective { 
       display: inline-block;
       background: var(--surface); 
@@ -73,10 +73,11 @@
       color: var(--text);
     }
     ul li::before {
-      content: 'â';
+      content: '•';
       position: absolute;
-      left: 0;
+      left: 0.4rem;
       color: var(--accent);
+      font-size: 1.2rem;
     }
     .permission-card {
       background: var(--surface);
@@ -116,7 +117,7 @@
   <div class="container">
     <header>
       <div class="logo">
-        <img src="logo.png" alt="RiderLog Logo" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover;" />
+        <img src="logo.png" alt="RiderLog Logo" onerror="this.style.display='none'" />
         <div>
           <h1>RiderLog: Mileage Tracker</h1>
           <p class="subtitle">Privacy Policy</p>
@@ -144,5 +145,225 @@
         </p>
       </div>
     </section>
+
+    <section>
+      <h2>2. Information We Collect</h2>
+
+      <h3 style="color:#f8fafc; font-size:1rem; margin:1rem 0 0.5rem;">2a. Data You Provide</h3>
+      <ul>
+        <li>Trip notes, vehicle information, and mileage logs you manually enter</li>
+        <li>Receipt images you scan within the app</li>
+        <li>Cloud account credentials (Dropbox, Google Drive, OneDrive) for optional sync &mdash; only if you connect them</li>
+      </ul>
+
+      <h3 style="color:#f8fafc; font-size:1rem; margin:1rem 0 0.5rem;">2b. Data Collected Automatically</h3>
+      <ul>
+        <li>GPS coordinates while the tracking service is active (for trip route mapping)</li>
+        <li>Start/stop timestamps of trips</li>
+        <li>Distance calculations derived from GPS data</li>
+      </ul>
+
+      <h3 style="color:#f8fafc; font-size:1rem; margin:1rem 0 0.5rem;">2c. Data We Do NOT Collect</h3>
+      <ul>
+        <li>We do not collect any analytics or crash data</li>
+        <li>We do not track you across other apps or websites</li>
+        <li>We do not sell your data to third parties &mdash; ever</li>
+        <li>We do not have access to your cloud files beyond what you explicitly sync</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Permissions &amp; Why We Use Them</h2>
+
+      <div class="permission-card">
+        <h3>📍 Location (Fine, Coarse &amp; Background)</h3>
+        <p>
+          Required for automatic GPS drive tracking. Fine location captures precise route data.
+          Background location is used so tracking continues while the app is minimized or the screen
+          is off &mdash; essential for complete trip logging without manual intervention. You can stop
+          tracking at any time from the notification or app interface.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>📷 Camera &amp; Media Access</h3>
+        <p>
+          Used for the receipt scanning feature powered by Google ML Kit OCR. All text recognition
+          is performed <strong>entirely on-device</strong> &mdash; receipt images are never uploaded to
+          any server. You can capture receipts directly or select images from your gallery.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>🔔 Notifications</h3>
+        <p>
+          Used to display a persistent notification while GPS tracking is active (required by Android
+          for foreground services). Also used for trip completion summaries and sync status alerts.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>📡 Bluetooth</h3>
+        <p>
+          Optional. Used to detect connection/disconnection of Bluetooth devices (e.g., car
+          hands-free systems or OBD adapters) to automatically start or stop trip tracking.
+          Bluetooth data is not stored or transmitted.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>⚡ Boot Receiver (Auto-start)</h3>
+        <p>
+          Allows the tracking service to automatically resume after a device reboot, if tracking
+          was active before shutdown. This ensures no trips are missed. You can disable auto-tracking
+          in app settings.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>🌐 Internet &amp; Network State</h3>
+        <p>
+          Used only when you choose to sync your trip data or receipts to Dropbox, Google Drive,
+          or Microsoft OneDrive. The app works fully offline without this permission being exercised.
+        </p>
+      </div>
+
+      <div class="permission-card">
+        <h3>🔋 Battery Optimization Exemption</h3>
+        <p>
+          RiderLog may request exemption from battery optimization to prevent Android from killing
+          the GPS tracking service during long trips. This is purely to ensure reliable mileage
+          tracking and has no effect on data privacy.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. How We Use Your Information</h2>
+      <ul>
+        <li>To calculate trip distance and generate mileage reports for tax purposes</li>
+        <li>To extract expense data from receipt images (on-device OCR only)</li>
+        <li>To sync your data to your personally chosen cloud storage, when you opt in</li>
+        <li>To automatically resume tracking after device reboots, if enabled</li>
+        <li>To send you trip-related notifications when the tracking service is running</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Cloud Storage &amp; Third-Party Services</h2>
+      <p>
+        RiderLog optionally integrates with the following third-party cloud storage services for
+        backup and sync purposes. These integrations are entirely opt-in:
+      </p>
+      <ul>
+        <li><strong>Google Drive</strong> &mdash; governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li><strong>Dropbox</strong> &mdash; governed by <a href="https://www.dropbox.com/privacy" target="_blank" rel="noopener">Dropbox Privacy Policy</a></li>
+        <li><strong>Microsoft OneDrive</strong> &mdash; governed by <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a></li>
+      </ul>
+      <p>
+        We only access the specific folder(s) you authorize during the OAuth connection process.
+        We do not read, store, or transmit any other files in your cloud accounts.
+      </p>
+
+      <h3 style="color:#f8fafc; font-size:1rem; margin:1rem 0 0.5rem;">Google ML Kit</h3>
+      <p>
+        Receipt scanning uses Google ML Kit Text Recognition, which runs fully on-device. No
+        images are sent to Google's servers. See
+        <a href="https://developers.google.com/ml-kit/privacy" target="_blank" rel="noopener">ML Kit Privacy disclosure</a>.
+      </p>
+
+      <h3 style="color:#f8fafc; font-size:1rem; margin:1rem 0 0.5rem;">Google Play Billing</h3>
+      <p>
+        Subscription purchases are processed through Google Play Billing. Payment information is
+        handled entirely by Google. We receive only a confirmation of your subscription status.
+        See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Subscriptions &amp; Billing</h2>
+      <p>RiderLog offers the following subscription options:</p>
+      <ul>
+        <li><strong>Lifetime Access</strong> &mdash; $99.99 one-time (first 500 users only), with a 14-day free trial</li>
+        <li><strong>Monthly Subscription</strong> &mdash; $4.99/month</li>
+        <li><strong>Annual Subscription</strong> &mdash; $49.99/year</li>
+      </ul>
+      <p>
+        All billing is managed through the Google Play Store. Subscriptions automatically renew
+        unless cancelled at least 24 hours before the end of the current billing period.
+        You can manage or cancel your subscription through your Google Play account settings.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Data Storage &amp; Security</h2>
+      <p>
+        Your trip data, logs, and receipts are stored locally on your device using secure app-private
+        storage. This data is not accessible to other apps on your device.
+      </p>
+      <p>
+        If you enable cloud sync, your data is transferred over encrypted HTTPS connections to
+        your chosen cloud storage provider. We use OAuth 2.0 for secure authentication with
+        cloud providers &mdash; we never store your cloud account passwords.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Data Retention &amp; Deletion</h2>
+      <p>
+        All your trip data remains on your device and under your control. You can delete individual
+        trips, receipts, or all app data at any time within the app settings.
+      </p>
+      <p>
+        Uninstalling RiderLog from your device will remove all locally stored data. If you have
+        synced data to cloud storage, you can delete those files at any time through your cloud
+        provider's interface.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Children's Privacy</h2>
+      <p>
+        RiderLog is designed for professional use by adults (18+) and is not directed at children
+        under the age of 13. We do not knowingly collect any personal information from children.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Your Rights</h2>
+      <p>Depending on your location, you may have the following rights regarding your data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the data stored on your device</li>
+        <li><strong>Deletion:</strong> Delete all your data through the app settings or by uninstalling</li>
+        <li><strong>Portability:</strong> Export your trip data in CSV/PDF format from within the app</li>
+        <li><strong>Opt-out:</strong> Disable background tracking, cloud sync, or Bluetooth triggers at any time</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>11. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. We will notify you of any significant
+        changes by updating the "Effective Date" at the top of this page. Your continued use of RiderLog
+        after any changes constitutes your acceptance of the updated policy.
+      </p>
+    </section>
+
+    <section>
+      <h2>12. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us:</p>
+      <ul>
+        <li><strong>Developer:</strong> Neeraj Verma</li>
+        <li><strong>Email:</strong> <a href="mailto:neerajverma04@gmail.com">neerajverma04@gmail.com</a></li>
+        <li><strong>App:</strong> RiderLog: Mileage Tracker</li>
+        <li><strong>Response Time:</strong> We aim to respond within 48 hours</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Neeraj Verma &bull; RiderLog: Mileage Tracker &bull; All rights reserved.</p>
+      <p style="margin-top:0.5rem;">Last updated: September 20, 2026</p>
+    </footer>
+  </div>
 </body>
 </html>
